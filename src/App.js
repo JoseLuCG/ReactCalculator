@@ -58,8 +58,8 @@ function App() {
   return (
     <>
       <h1>Calculadora</h1>
-      <input type="text" value={firstNumber} onChange={changeFirstNumberHandler} class="input1"/>
-      <input type="text" value={secondNumber} onChange={changeSecondNumberHandler} class="input2"/>
+      <input type="text" value={firstNumber} onChange={changeFirstNumberHandler}/>
+      <input type="text" value={secondNumber} onChange={changeSecondNumberHandler}/>
       <button onClick={addHandler}>+</button>
       <button onClick={subtractHandler}>-</button>
       <button onClick={multiplyHandler}>x</button>
