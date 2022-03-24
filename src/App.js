@@ -83,19 +83,27 @@ function App() {
 
   return (
     <>
+    <div class="container">
       <h1>Calculadora</h1>
-      <input type="text" value={firstNumber} onChange={changeFirstNumberHandler}/>
-      <input type="text" value={secondNumber} onChange={changeSecondNumberHandler}/>
-      <button onClick={addHandler}>+</button>
-      <button onClick={subtractHandler}>-</button>
-      <button onClick={multiplyHandler}>x</button>
-      <button onClick={divisionHandler}>/</button>
-      <button onClick={deleteHandler}>C</button>
-      <button onClick={memorychange}>M+</button>
-      <button onClick={memoryRecover}>MR</button>
-      <p>{result}</p>
+      <div class="inputs">
+        <input type="text" value={firstNumber} onChange={changeFirstNumberHandler}/>
+        <input type="text" value={secondNumber} onChange={changeSecondNumberHandler}/>
+      </div>
+      <div class="buttons">
+        <div class="bOperators">
+          <button onClick={addHandler}>+</button>
+          <button onClick={subtractHandler}>-</button>
+          <button onClick={multiplyHandler}>x</button>
+          <button onClick={divisionHandler}>/</button>
+        </div>
+        <button onClick={deleteHandler}>C</button>
+        <button onClick={memorychange}>M+</button>
+        <button onClick={memoryRecover}>MR</button>
+      </div>
+      <p id="result">{result}</p>
       <h1>Historial de operaciones:</h1>
-      <History results={resultsHistory} />
+      <History results={resultsHistory}/>
+    </div>
     </>
   );
 }

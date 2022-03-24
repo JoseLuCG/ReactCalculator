@@ -4,7 +4,9 @@ function History({results}) {
     )
     return (
         <>
-            {liArray}
+            <div class="historial">
+                {liArray}
+            </div>
         </>
     )
 }
