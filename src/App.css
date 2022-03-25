@@ -1,23 +1,86 @@
+/*Css of container*/
 .container {
-  background-color: rgb(255, 0, 0);
+  background-color: rgb(33, 172, 214);
 }
+/*H1*/
+.Cal {
+  text-align: center;
+}
+/*Inputs of numbers*/
 .inputs {
   display: flex;
   flex-direction: column;
 }
+.input {
+  text-align: center;
+}
+/*Buttons*/
 .buttons{
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
 }
-.bOperators{
-  display: grid;
+.C {
+  grid-column-start: 3;
+  grid-column-end: 4;
+
+}
+.M+ {
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+.MR {
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+
+.add{
+  grid-column-start: 1;
+  grid-column-end: 2;
   grid-row-start: 1;
+  grid-row-end: 2;
+}
+.subtract {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.x {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.division {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.deleteHistorial {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
   grid-row-end: 4;
 }
+/*Result*/
 #result {
-  background-color:darkcyan;
+  background-color: rgb(175, 255, 255);
+  border-radius: 20px;
+  text-align: center;
+  border-style: solid;
+  border-color:darkcyan;
+  border-width: 5px;
 }
+/*Record*/
 .historial {
-  background-color: grey;
+  background-color: rgb(1, 116, 145);
+  display: flex;
+  flex-direction: column;
+}
+.dataRecord {
+  text-align: center;
+  border-radius: 5px;
+  background-color: aquamarine;
+  margin: 5px;
 }

@@ -49,6 +49,9 @@ function App() {
     setSecondNumber("");
     setResult("");
   }
+  function deleteHistorial() {
+    setResultsHistory([]);
+  }
 
   //Change of memory:
   function memorychange() {
@@ -84,21 +87,20 @@ function App() {
   return (
     <>
     <div class="container">
-      <h1>Calculadora</h1>
+      <h1 class="Cal">Calculadora</h1>
       <div class="inputs">
-        <input type="text" value={firstNumber} onChange={changeFirstNumberHandler}/>
-        <input type="text" value={secondNumber} onChange={changeSecondNumberHandler}/>
+        <input class="input" type="text" value={firstNumber} onChange={changeFirstNumberHandler}/>
+        <input class="input" type="text" value={secondNumber} onChange={changeSecondNumberHandler}/>
       </div>
       <div class="buttons">
-        <div class="bOperators">
-          <button onClick={addHandler}>+</button>
-          <button onClick={subtractHandler}>-</button>
-          <button onClick={multiplyHandler}>x</button>
-          <button onClick={divisionHandler}>/</button>
-        </div>
-        <button onClick={deleteHandler}>C</button>
-        <button onClick={memorychange}>M+</button>
-        <button onClick={memoryRecover}>MR</button>
+        <button class="add" onClick={addHandler}>+</button>
+        <button class="subtract" onClick={subtractHandler}>-</button>
+        <button class="x" onClick={multiplyHandler}>x</button>
+        <button class="division" onClick={divisionHandler}>/</button>
+        <button class="C" onClick={deleteHandler}>C</button>
+        <button class="M+" onClick={memorychange}>M+</button>
+        <button class="MR" onClick={memoryRecover}>MR</button>
+        <button class="deleteHistorial" onClick={deleteHistorial}>Del</button>
       </div>
       <p id="result">{result}</p>
       <h1>Historial de operaciones:</h1>
